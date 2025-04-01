@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -106,9 +107,6 @@ const Index = () => {
                       animators and studios.
                     </p>
                   </div>
-                  <Button variant="ghost" className="text-primary w-full mt-2 kurzgesagt-button">
-                    Learn More <ArrowRight size={16} className="ml-1" />
-                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -142,9 +140,6 @@ const Index = () => {
                       product demonstrations, and creative storytelling.
                     </p>
                   </div>
-                  <Button variant="ghost" className="text-accent w-full mt-2 kurzgesagt-button">
-                    See Our Work <ArrowRight size={16} className="ml-1" />
-                  </Button>
                 </div>
               </CardContent>
             </Card>
