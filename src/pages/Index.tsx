@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
@@ -9,10 +9,17 @@ import {
   Box, 
   MousePointerClick,
   CirclePlay,
-  FileCode
+  FileCode,
+  Mail
 } from "lucide-react";
 
 const Index = () => {
+  const companiesSectionRef = useRef<HTMLElement>(null);
+  
+  const scrollToCompanies = () => {
+    companiesSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground dark">
       {/* Hero Section */}
@@ -42,12 +49,13 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="kurzgesagt-button bg-primary hover:bg-primary/90 text-white">
+              <Button 
+                size="lg" 
+                className="kurzgesagt-button bg-primary hover:bg-primary/90 text-white"
+                onClick={scrollToCompanies}
+              >
                 Explore Our Companies
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="kurzgesagt-button">
-                Learn More
               </Button>
             </div>
           </div>
@@ -66,8 +74,25 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Call to Action - Moved above Companies Section */}
+      <section className="py-16">
+        <div className="container max-w-5xl mx-auto px-4">
+          <div className="bg-card rounded-2xl border border-border p-8 md:p-12 text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to Collaborate?</h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Whether you need animation software, 3D visualization services, or
+              a creative partner for your next project, we're here to help.
+            </p>
+            <div className="flex items-center justify-center gap-2 text-center">
+              <Mail size={20} className="text-secondary" />
+              <span className="text-lg font-medium">Contact: imaad5257@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Companies Section */}
-      <section className="py-20 bg-card/50">
+      <section ref={companiesSectionRef} className="py-20 bg-card/50" id="companies">
         <div className="container max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Companies</h2>
@@ -147,22 +172,6 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Call to Action */}
-      <section className="py-20">
-        <div className="container max-w-5xl mx-auto px-4">
-          <div className="bg-card rounded-2xl border border-border p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Collaborate?</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Whether you need animation software, 3D visualization services, or
-              a creative partner for your next project, we're here to help.
-            </p>
-            <Button size="lg" className="kurzgesagt-button bg-secondary text-secondary-foreground hover:bg-secondary/90">
-              Get in Touch
-            </Button>
-          </div>
-        </div>
-      </section>
-      
       {/* Footer */}
       <footer className="bg-background border-t border-border py-12">
         <div className="container max-w-6xl mx-auto px-4">
@@ -185,7 +194,7 @@ const Index = () => {
                 <h4 className="font-medium mb-2 text-sm uppercase tracking-wider text-muted-foreground">Contact</h4>
                 <ul className="space-y-1">
                   <li><a href="#" className="text-sm hover:text-primary">About Us</a></li>
-                  <li><a href="#" className="text-sm hover:text-primary">Contact</a></li>
+                  <li><a href="mailto:imaad5257@gmail.com" className="text-sm hover:text-primary">Contact</a></li>
                 </ul>
               </div>
             </div>
