@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -6,7 +5,7 @@ import {
   ArrowRight, 
   Star, 
   Code2, 
-  Cube3D, 
+  Box, 
   MousePointerClick,
   CirclePlay,
   FileCode
@@ -118,7 +117,7 @@ const Index = () => {
             <Card className="kurzgesagt-card border-accent/30">
               <CardContent className="p-0">
                 <div className="h-40 bg-gradient-to-r from-accent to-accent/80 flex items-center justify-center">
-                  <Cube3D size={60} className="text-white" />
+                  <Box size={60} className="text-white" />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
