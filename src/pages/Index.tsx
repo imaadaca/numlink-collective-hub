@@ -60,13 +60,14 @@ const Index = () => {
             </div>
           </div>
           
-          {/* Blob art - Kurzgesagt style */}
-          <div className="relative h-80 sm:h-96 md:h-[500px] max-w-5xl mx-auto">
+          {/* Blob art - Kurzgesagt style - Moved slightly up */}
+          <div className="relative h-80 sm:h-96 md:h-[500px] max-w-5xl mx-auto -mt-4">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="bg-card border-4 border-secondary/50 rounded-2xl w-full h-full max-w-4xl max-h-96 shadow-xl overflow-hidden p-8 flex items-center justify-center">
                 <div className="text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4">The Numlink Collective</h2>
-                  <p className="text-lg text-muted-foreground mb-6">Where technology meets creativity</p>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4">The Numlink Group</h2>
+                  <p className="text-lg text-muted-foreground mb-3">Where technology meets creativity</p>
+                  <p className="text-md text-muted-foreground">Started in 2019, Numlink Group strives till date with new software, animations being released frequently by the help of our employees and contract workers.</p>
                 </div>
               </div>
             </div>
